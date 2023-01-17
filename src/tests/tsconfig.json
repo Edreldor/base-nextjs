@@ -1,0 +1,10 @@
+{
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    // be explicit about types included
+    "types": ["jest", "node", "@types/testing-library__jest-dom"]
+  },
+  "include": ["**/*.ts", "**/*.tsx", "**/*.test.tsx"],
+  "exclude": ["**/*.spec.cy.ts"]
+}
