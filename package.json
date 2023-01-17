@@ -6,8 +6,10 @@
     "dev": "yarn next dev",
     "build": "yarn next build",
     "start": "yarn next start",
-    "lint": "yarn next lint",
-    "lint:fix": "yarn next lint --fix",
+    "lint": "yarn next lint && yarn lint:css",
+    "lint:fix": "yarn next lint --fix && yarn lint:css:fix",
+    "lint:css": "yarn stylelint **/*.{scss,css}",
+    "lint:css:fix": "yarn stylelint --fix **/*.{scss,css}",
     "format": "yarn prettier --write"
   },
   "dependencies": {
@@ -29,6 +31,10 @@
     "eslint-plugin-jest-dom": "^4.0.3",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
-    "prettier": "^2.8.3"
+    "prettier": "^2.8.3",
+    "stylelint": "^14.16.1",
+    "stylelint-checkstyle-formatter": "^0.1.2",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-scss": "^4.3.0"
   }
 }
