@@ -1,3 +1,28 @@
 {
-  "extends": "next/core-web-vitals"
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:jest-dom/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/ban-ts-comment": "off"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.ts"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
 }
