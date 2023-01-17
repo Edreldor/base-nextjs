@@ -6,7 +6,9 @@
     "dev": "yarn next dev",
     "build": "yarn next build",
     "start": "yarn next start",
-    "lint": "yarn next lint"
+    "lint": "yarn next lint",
+    "lint:fix": "yarn next lint --fix",
+    "format": "yarn prettier --write"
   },
   "dependencies": {
     "@next/font": "13.1.2",
